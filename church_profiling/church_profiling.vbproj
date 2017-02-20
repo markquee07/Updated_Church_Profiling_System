@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{230142DF-EF42-43BC-813A-C1B25D315327}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>church_profiling</RootNamespace>
+    <AssemblyName>church_profiling</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>church_profiling.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>church_profiling.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Controls">
+      <HintPath>bin\Debug\aforge\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>bin\Debug\aforge\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>bin\Debug\aforge\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.DebuggerVisualizers.VS2012">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\bin\Emgu.CV.DebuggerVisualizers.VS2012.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\bin\Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\bin\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\sample merge\menu\Final_Church_Profiling_System\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Attendance.vb" />
+    <Compile Include="Class\burialOfficials.vb" />
+    <Compile Include="Class\cart.vb" />
+    <Compile Include="Class\Church.vb" />
+    <Compile Include="Class\churchOfficial.vb" />
+    <Compile Include="Class\Database.vb" />
+    <Compile Include="Class\Emergencyfund.vb" />
+    <Compile Include="Class\Expenditure.vb" />
+    <Compile Include="Class\Expenses.vb" />
+    <Compile Include="Class\Offering.vb" />
+    <Compile Include="Class\Pastor.vb" />
+    <Compile Include="Class\Selected_Official.vb" />
+    <Compile Include="Class\Shares.vb" />
+    <Compile Include="Class\Useraccount.vb" />
+    <Compile Include="Forms\frmActiveBurialOfficials.Designer.vb">
+      <DependentUpon>frmActiveBurialOfficials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmActiveBurialOfficials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmActiveChurchOfficial.Designer.vb">
+      <DependentUpon>frmActiveChurchOfficial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmActiveChurchOfficial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddChurchName.Designer.vb">
+      <DependentUpon>frmAddChurchName.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddChurchName.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAttendance.Designer.vb">
+      <DependentUpon>frmAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBurialOfficers.Designer.vb">
+      <DependentUpon>frmBurialOfficers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBurialOfficers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmchangepass.Designer.vb">
+      <DependentUpon>frmchangepass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmchangepass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmchurchlist.Designer.vb">
+      <DependentUpon>frmchurchlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmchurchlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChurchOfficials.Designer.vb">
+      <DependentUpon>frmChurchOfficials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChurchOfficials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmemergencyFund.Designer.vb">
+      <DependentUpon>frmemergencyFund.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmemergencyFund.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExpenditures.Designer.vb">
+      <DependentUpon>frmExpenditures.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExpenditures.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExpenses.Designer.vb">
+      <DependentUpon>frmExpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExpenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFamilyDetails.Designer.vb">
+      <DependentUpon>frmFamilyDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFamilyDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmListOfAttendance.Designer.vb">
+      <DependentUpon>frmListOfAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListOfAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmListofBurialOfficial.Designer.vb">
+      <DependentUpon>frmListofBurialOfficial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListofBurialOfficial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmListofDebts.Designer.vb">
+      <DependentUpon>frmListofDebts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListofDebts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmListOfHousehold.Designer.vb">
+      <DependentUpon>frmListOfHousehold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListOfHousehold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmListofPastor.Designer.vb">
+      <DependentUpon>frmListofPastor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmListofPastor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainFinal.Designer.vb">
+      <DependentUpon>frmMainFinal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMainFinal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMemberAttendance.Designer.vb">
+      <DependentUpon>frmMemberAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMemberAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMember_registration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMember_registration.Designer.vb">
+      <DependentUpon>frmMember_registration.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOffering.Designer.vb">
+      <DependentUpon>frmOffering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOffering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPastorViewDetails.Designer.vb">
+      <DependentUpon>frmPastorViewDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPastorViewDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPayBalance.Designer.vb">
+      <DependentUpon>frmPayBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPayBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPayFines.Designer.vb">
+      <DependentUpon>frmPayFines.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPayFines.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegisterPastor.Designer.vb">
+      <DependentUpon>frmRegisterPastor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegisterPastor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegisterUser.Designer.vb">
+      <DependentUpon>frmRegisterUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegisterUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmShared.Designer.vb">
+      <DependentUpon>frmShared.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmShared.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSiblingsRegistration.Designer.vb">
+      <DependentUpon>frmSiblingsRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSiblingsRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserAccountProfile.Designer.vb">
+      <DependentUpon>frmUserAccountProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserAccountProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUser_login.Designer.vb">
+      <DependentUpon>frmUser_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUser_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewMemberDetails.Designer.vb">
+      <DependentUpon>frmViewMemberDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewMemberDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\GLOBAL_FUNCTION.vb" />
+    <Compile Include="Module\GLOBAL_VARS.vb" />
+    <Compile Include="Module\Main.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmActiveBurialOfficials.resx">
+      <DependentUpon>frmActiveBurialOfficials.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmActiveChurchOfficial.resx">
+      <DependentUpon>frmActiveChurchOfficial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddChurchName.resx">
+      <DependentUpon>frmAddChurchName.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAttendance.resx">
+      <DependentUpon>frmAttendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBurialOfficers.resx">
+      <DependentUpon>frmBurialOfficers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmchangepass.resx">
+      <DependentUpon>frmchangepass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmchurchlist.resx">
+      <DependentUpon>frmchurchlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChurchOfficials.resx">
+      <DependentUpon>frmChurchOfficials.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmemergencyFund.resx">
+      <DependentUpon>frmemergencyFund.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExpenditures.resx">
+      <DependentUpon>frmExpenditures.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExpenses.resx">
+      <DependentUpon>frmExpenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFamilyDetails.resx">
+      <DependentUpon>frmFamilyDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListOfAttendance.resx">
+      <DependentUpon>frmListOfAttendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListofBurialOfficial.resx">
+      <DependentUpon>frmListofBurialOfficial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListofDebts.resx">
+      <DependentUpon>frmListofDebts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListOfHousehold.resx">
+      <DependentUpon>frmListOfHousehold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmListofPastor.resx">
+      <DependentUpon>frmListofPastor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainFinal.resx">
+      <DependentUpon>frmMainFinal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMemberAttendance.resx">
+      <DependentUpon>frmMemberAttendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMember_registration.resx">
+      <DependentUpon>frmMember_registration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOffering.resx">
+      <DependentUpon>frmOffering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPastorViewDetails.resx">
+      <DependentUpon>frmPastorViewDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPayBalance.resx">
+      <DependentUpon>frmPayBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPayFines.resx">
+      <DependentUpon>frmPayFines.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegisterPastor.resx">
+      <DependentUpon>frmRegisterPastor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegisterUser.resx">
+      <DependentUpon>frmRegisterUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmShared.resx">
+      <DependentUpon>frmShared.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSiblingsRegistration.resx">
+      <DependentUpon>frmSiblingsRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserAccountProfile.resx">
+      <DependentUpon>frmUserAccountProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUser_login.resx">
+      <DependentUpon>frmUser_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewMemberDetails.resx">
+      <DependentUpon>frmViewMemberDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="opencv_ffmpeg310_64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\shared_dodge.jpg" />
+    <None Include="Resources\shared_deepsky.jpg" />
+    <None Include="Resources\Pastor_dodge1.jpg" />
+    <None Include="Resources\pastor_deepsky1.jpg" />
+    <None Include="Resources\offerings_dodge.jpg" />
+    <None Include="Resources\offerings_deepsky.jpg" />
+    <None Include="Resources\offering_dodge.jpg" />
+    <None Include="Resources\offering_deepsky.jpg" />
+    <None Include="Resources\view_sky.jpg" />
+    <None Include="Resources\view_dodge.jpg" />
+    <None Include="Resources\user_account_dodge.jpg" />
+    <None Include="Resources\user_account_deepsky.jpg" />
+    <None Include="Resources\report_dodge.jpg" />
+    <None Include="Resources\report_deepsky.jpg" />
+    <None Include="Resources\register_dodge.jpg" />
+    <None Include="Resources\register_deepsky.jpg" />
+    <None Include="Resources\Pastor_dodge.jpg" />
+    <None Include="Resources\pastor_deepsky.jpg" />
+    <None Include="Resources\monthly_fee_dodge.jpg" />
+    <None Include="Resources\monthly_fee_deepsky.jpg" />
+    <None Include="Resources\members_dodge.jpg" />
+    <None Include="Resources\members_deepsky.jpg" />
+    <None Include="Resources\member_dodge.jpg" />
+    <None Include="Resources\member_deepsky.jpg" />
+    <None Include="Resources\maintenance_dodge.jpg" />
+    <None Include="Resources\maintenance_deepsky.jpg" />
+    <None Include="Resources\logout_white.png" />
+    <None Include="Resources\logout_sky.png" />
+    <None Include="Resources\logout_blue.png" />
+    <None Include="Resources\income_dodge.jpg" />
+    <None Include="Resources\income_deepsky.jpg" />
+    <None Include="Resources\fines_dodge.jpg" />
+    <None Include="Resources\fines_deepsky.jpg" />
+    <None Include="Resources\File_dodge.jpg" />
+    <None Include="Resources\File_deepsky.jpg" />
+    <None Include="Resources\expenses_dodge.jpg" />
+    <None Include="Resources\expenses_deepsky.jpg" />
+    <None Include="Resources\expenditures_dodge.jpg" />
+    <None Include="Resources\expenditures_deepsky.jpg" />
+    <None Include="Resources\emergency_funds_dodge.jpg" />
+    <None Include="Resources\emergency_funds_deepsky.jpg" />
+    <None Include="Resources\church_officials_dodge.jpg" />
+    <None Include="Resources\church_officials_deepsky.jpg" />
+    <None Include="Resources\church_official_dodge.jpg" />
+    <None Include="Resources\church_official_deepsky.jpg" />
+    <None Include="Resources\church_name_dodge.jpg" />
+    <None Include="Resources\church_name_deepsky.jpg" />
+    <None Include="Resources\church_financial_trans_dodge.jpg" />
+    <None Include="Resources\church_financial_trans_deepsky.jpg" />
+    <None Include="Resources\certificate_dodge.jpg" />
+    <None Include="Resources\certificate_deepsky.jpg" />
+    <None Include="Resources\burial_officials_dodge.jpg" />
+    <None Include="Resources\burial_officials_deepsky.jpg" />
+    <None Include="Resources\Burial_official_dodge.jpg" />
+    <None Include="Resources\burial_official_deepsky.jpg" />
+    <None Include="Resources\burial_financial_trans_dodge.jpg" />
+    <None Include="Resources\burial_financial_trans_deepsky.jpg" />
+    <None Include="Resources\attendance_dodge.jpg" />
+    <None Include="Resources\attendance_deepsky.jpg" />
+    <None Include="Resources\image_icon1.jpg" />
+    <None Include="Resources\c2.png" />
+    <None Include="Resources\c.png" />
+    <None Include="Resources\image_icon.jpg" />
+    <None Include="Resources\user2.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\user_icon.png" />
+    <None Include="Resources\light_deepsky.jpg" />
+    <None Include="Resources\members_assignment_2.jpg" />
+    <None Include="Resources\members_assignment.jpg" />
+    <None Include="Resources\meetings_report_21.jpg" />
+    <None Include="Resources\meetings_report_2.jpg" />
+    <None Include="Resources\meetings_report.jpg" />
+    <None Include="Resources\church_meeting_2.jpg" />
+    <None Include="Resources\church_meeting.jpg" />
+    <None Include="Resources\burial_meeting_2.jpg" />
+    <None Include="Resources\burial_meeting.jpg" />
+    <None Include="Resources\income_3.jpg" />
+    <None Include="Resources\income_2.jpg" />
+    <None Include="Resources\income.jpg" />
+    <None Include="Resources\fines_2.jpg" />
+    <None Include="Resources\fines.jpg" />
+    <None Include="Resources\expenses_2.jpg" />
+    <None Include="Resources\expenses.jpg" />
+    <None Include="Resources\expenditures_2.jpg" />
+    <None Include="Resources\expenditures.jpg" />
+    <None Include="Resources\financial_transaction_2.jpg" />
+    <None Include="Resources\financial_transaction.jpg" />
+    <None Include="Resources\manage_bruial_official_21.jpg" />
+    <None Include="Resources\manage_bruial_official1.jpg" />
+    <None Include="Resources\attendance_of_members_2.jpg" />
+    <None Include="Resources\attendance_of_members.jpg" />
+    <None Include="Resources\manage_bruial_official_2.jpg" />
+    <None Include="Resources\manage_bruial_official.jpg" />
+    <None Include="Resources\church_official_2.jpg" />
+    <None Include="Resources\useraccount_2.jpg" />
+    <None Include="Resources\useraccount.jpg" />
+    <None Include="Resources\church_official.jpg" />
+    <None Include="Resources\church_name_2.jpg" />
+    <None Include="Resources\church_name.jpg" />
+    <None Include="Resources\burial_officials_2.jpg" />
+    <None Include="Resources\burial_officials.jpg" />
+    <None Include="Resources\attendance_report_Dodge.jpg" />
+    <None Include="Resources\attendance_report_deepsky.jpg" />
+    <None Include="Resources\treasurers_report_2.jpg" />
+    <None Include="Resources\treasurers_report.jpg" />
+    <None Include="Resources\Household_report_2.jpg" />
+    <None Include="Resources\Household_report.jpg" />
+    <None Include="Resources\certificate and clearances_2.jpg" />
+    <None Include="Resources\certificate and clearances.jpg" />
+    <None Include="Resources\attendance_report_2.jpg" />
+    <None Include="Resources\attendance_report.jpg" />
+    <None Include="Resources\list_of_officials2.jpg" />
+    <None Include="Resources\list_of_officials.jpg" />
+    <None Include="Resources\list_of_family2.jpg" />
+    <None Include="Resources\list_of_family.jpg" />
+    <None Include="Resources\membership_org.png" />
+    <None Include="Resources\manage_financial.png" />
+    <None Include="Resources\attendance.png" />
+    <None Include="Resources\membership_org_2.jpg" />
+    <None Include="Resources\membership_org.jpg" />
+    <None Include="Resources\manage_financial_2.jpg" />
+    <None Include="Resources\manage_financial.jpg" />
+    <None Include="Resources\attendance_2.jpg" />
+    <None Include="Resources\attendance.jpg" />
+    <None Include="Resources\view_2.jpg" />
+    <None Include="Resources\view.jpg" />
+    <None Include="Resources\report_2.jpg" />
+    <None Include="Resources\report.jpg" />
+    <None Include="Resources\maintenance_2.jpg" />
+    <None Include="Resources\maintenance.jpg" />
+    <None Include="Resources\file_2.jpg" />
+    <None Include="Resources\File.jpg" />
+    <None Include="Resources\burial_2.jpg" />
+    <None Include="Resources\burial.jpg" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\menu_color.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
