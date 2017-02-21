@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2017 at 06:32 AM
+-- Generation Time: Feb 21, 2017 at 04:45 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -168,7 +168,8 @@ INSERT INTO `tbl_child_information` (`id`, `Child_id`, `Gender`, `Birth_date`, `
 (56, '3U0MR2DG', 'FEMALE', '2016-02-19 00:00:00', 'mk', 'mk', 'mk', 'ACTIVE', 'mk_3U0MR2DGE.jpg'),
 (57, 'Q9LOLJIH', 'FEMALE', '2014-02-19 00:00:00', 'j', 'j', 'j', 'ACTIVE', 'j_Q9LOLJIHG.jpg'),
 (58, 'PV4LD7CU', 'FEMALE', '2016-02-19 00:00:00', 'ns', 'ns', 'ns', 'ACTIVE', 'ns_PV4LD7CU3.jpg'),
-(59, 'DMAOFOGC', 'MALE', '2016-02-19 00:00:00', 'ERASE', 'ERASE', 'ERASE', 'ACTIVE', 'ERASE_DMAOFOGCR.jpg');
+(59, 'DMAOFOGC', 'MALE', '2016-02-19 00:00:00', 'ERASE', 'ERASE', 'ERASE', 'ACTIVE', 'ERASE_DMAOFOGCR.jpg'),
+(60, '3BZMQBOJ', 'FEMALE', '2016-02-20 00:00:00', 'sorority', 'sorority', 'sorority', 'ACTIVE', 'sorority_3BZMQBOJC.JPG');
 
 -- --------------------------------------------------------
 
@@ -292,7 +293,8 @@ INSERT INTO `tbl_educational_background` (`Member_id`, `HEA`, `Course_graduated`
 (150, '', 'None', 'LOL', 'No', 'None'),
 (151, '', 'None', 'n', 'No', 'None'),
 (152, '', 'None', 'ERASE', 'No', 'None'),
-(153, 'High School', 'None', 'JK', 'No', 'None');
+(153, 'High School', 'None', 'JK', 'No', 'None'),
+(155, '', 'None', 'None', 'No', 'None');
 
 -- --------------------------------------------------------
 
@@ -391,7 +393,8 @@ INSERT INTO `tbl_family_details` (`Parent_id`, `Child_id`) VALUES
 (149, 56),
 (150, 57),
 (151, 58),
-(152, 59);
+(152, 59),
+(155, 60);
 
 -- --------------------------------------------------------
 
@@ -427,7 +430,7 @@ INSERT INTO `tbl_fines` (`id`, `member_id`, `Fines`, `status`, `meeting_date`, `
 (11, 144, 50, 'UNPAID', '2017-02-19', 'KAON NATA HAMZ', 50),
 (12, 145, 50, 'UNPAID', '2017-02-19', 'KAON NATA HAMZ', 50),
 (13, 146, 50, 'UNPAID', '2017-02-19', 'KAON NATA HAMZ', 50),
-(14, 130, 50, 'UNPAID', '2017-02-19', 'TEST ATTENDANCE', 50),
+(14, 130, 50, 'PAID', '2017-02-19', 'TEST ATTENDANCE', 50),
 (15, 131, 50, 'PAID', '2017-02-19', 'TEST ATTENDANCE', 50),
 (16, 132, 50, 'PAID', '2017-02-19', 'TEST ATTENDANCE', 50),
 (17, 133, 50, 'PAID', '2017-02-19', 'TEST ATTENDANCE', 50),
@@ -437,7 +440,7 @@ INSERT INTO `tbl_fines` (`id`, `member_id`, `Fines`, `status`, `meeting_date`, `
 (21, 137, 50, 'PAID', '2017-02-19', 'TEST ATTENDANCE', 50),
 (22, 138, 50, 'PAID', '2017-02-19', 'TEST ATTENDANCE', 50),
 (23, 142, 50, 'PAID', '2017-02-19', 'TEST ATTENDANCE', 50),
-(24, 143, 50, 'UNPAID', '2017-02-19', 'TEST ATTENDANCE', 50),
+(24, 143, 50, 'PAID', '2017-02-19', 'TEST ATTENDANCE', 50),
 (25, 144, 50, 'UNPAID', '2017-02-19', 'TEST ATTENDANCE', 50),
 (26, 145, 50, 'UNPAID', '2017-02-19', 'TEST ATTENDANCE', 50),
 (27, 146, 50, 'UNPAID', '2017-02-19', 'TEST ATTENDANCE', 50);
@@ -546,7 +549,25 @@ INSERT INTO `tbl_member_information` (`id`, `Member_id`, `First_name`, `Last_nam
 (151, 'PV4LD7CU', 'N', 'N', 'N', '2017-01-29 00:00:00', 'Male', 'N', 'N', 'N', '', '2017-01-29 00:00:00', 'n', 'n', 'A+', '', 'N', 'N', '0000-00-00 00:00:00', 'member', 'PV4LD7CU3.jpg', 'ACTIVE'),
 (152, 'DMAOFOGC', 'ERASE', 'ERASE', 'ERASE', '2017-01-29 00:00:00', 'Male', 'ERASE', 'ERASE', 'ERASE', '', '2017-01-29 00:00:00', 'ERASE', 'ERASE', 'A+', '', 'ERASE', 'ERASE', '0000-00-00 00:00:00', 'member', 'DMAOFOGCR.jpg', 'ACTIVE'),
 (153, 'QL4ICTYY', 'JK', 'JK', 'JK', '2017-01-29 00:00:00', 'Male', 'JK', 'JK', 'JK', 'Yes', '2017-01-29 00:00:00', 'JK', 'JK', 'A+', 'Married', 'JK', 'JK', '0000-00-00 00:00:00', 'member', 'image_icon.jpg', 'ACTIVE'),
-(154, 'T5880SBA', 'cloe', 'cloe', 'cloe', '2017-02-23 00:00:00', 'FEMALE', 'N/a', 'N/a', 'N/a', 'No', '2017-01-29 00:00:00', 'None', 'None', 'N/a', 'N/a', 'N/a', 'N/a', '2017-01-29 00:00:00', 'pastor', 'cloe.jpg', 'ACTIVE');
+(154, 'T5880SBA', 'cloe', 'cloe', 'cloe', '2017-02-23 00:00:00', 'FEMALE', 'N/a', 'N/a', 'N/a', 'No', '2017-01-29 00:00:00', 'None', 'None', 'N/a', 'N/a', 'N/a', 'N/a', '2017-01-29 00:00:00', 'pastor', 'cloe.jpg', 'ACTIVE'),
+(155, '3BZMQBOJ', 'MAHAMZ', 'MAHAMZ', 'MAHAMZ', '2017-01-29 00:00:00', 'Male', 'MAHAMZ', 'MAHAMZ', 'MAHAMZ', '', '2017-01-29 00:00:00', 'None', 'None', 'A+', '', 'MAHAMZ', 'MAHAMZ', '0000-00-00 00:00:00', 'member', '3BZMQBOJC.JPG', 'ACTIVE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_month_generator`
+--
+
+CREATE TABLE `tbl_month_generator` (
+  `Month` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_month_generator`
+--
+
+INSERT INTO `tbl_month_generator` (`Month`) VALUES
+('2017-03-21');
 
 -- --------------------------------------------------------
 
@@ -609,8 +630,67 @@ CREATE TABLE `tbl_ten` (
   `amount` double NOT NULL,
   `status` varchar(45) NOT NULL,
   `Month` date NOT NULL,
-  `Monthly_amount` double NOT NULL
+  `id` int(10) UNSIGNED NOT NULL,
+  `balance` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_ten`
+--
+
+INSERT INTO `tbl_ten` (`member_id`, `amount`, `status`, `Month`, `id`, `balance`) VALUES
+(130, 10, 'UNPAID', '2017-02-21', 1, 10),
+(131, 10, 'UNPAID', '2017-02-21', 2, 10),
+(132, 10, 'UNPAID', '2017-02-21', 3, 10),
+(133, 10, 'UNPAID', '2017-02-21', 4, 10),
+(134, 10, 'UNPAID', '2017-02-21', 5, 10),
+(135, 10, 'UNPAID', '2017-02-21', 6, 10),
+(136, 10, 'UNPAID', '2017-02-21', 7, 10),
+(137, 10, 'UNPAID', '2017-02-21', 8, 10),
+(138, 10, 'UNPAID', '2017-02-21', 9, 10),
+(139, 10, 'UNPAID', '2017-02-21', 10, 10),
+(140, 10, 'UNPAID', '2017-02-21', 11, 10),
+(141, 10, 'UNPAID', '2017-02-21', 12, 10),
+(142, 10, 'UNPAID', '2017-02-21', 13, 10),
+(143, 10, 'UNPAID', '2017-02-21', 14, 10),
+(144, 10, 'UNPAID', '2017-02-21', 15, 10),
+(145, 10, 'UNPAID', '2017-02-21', 16, 10),
+(146, 10, 'UNPAID', '2017-02-21', 17, 10),
+(147, 10, 'UNPAID', '2017-02-21', 18, 10),
+(148, 10, 'UNPAID', '2017-02-21', 19, 10),
+(149, 10, 'UNPAID', '2017-02-21', 20, 10),
+(150, 10, 'UNPAID', '2017-02-21', 21, 10),
+(151, 10, 'UNPAID', '2017-02-21', 22, 10),
+(152, 10, 'UNPAID', '2017-02-21', 23, 10),
+(153, 10, 'UNPAID', '2017-02-21', 24, 10),
+(154, 10, 'UNPAID', '2017-02-21', 25, 10),
+(155, 10, 'UNPAID', '2017-02-21', 26, 10),
+(130, 10, 'UNPAID', '2017-03-21', 27, 10),
+(131, 10, 'UNPAID', '2017-03-21', 28, 10),
+(132, 10, 'UNPAID', '2017-03-21', 29, 10),
+(133, 10, 'UNPAID', '2017-03-21', 30, 10),
+(134, 10, 'UNPAID', '2017-03-21', 31, 10),
+(135, 10, 'UNPAID', '2017-03-21', 32, 10),
+(136, 10, 'UNPAID', '2017-03-21', 33, 10),
+(137, 10, 'UNPAID', '2017-03-21', 34, 10),
+(138, 10, 'UNPAID', '2017-03-21', 35, 10),
+(139, 10, 'UNPAID', '2017-03-21', 36, 10),
+(140, 10, 'UNPAID', '2017-03-21', 37, 10),
+(141, 10, 'UNPAID', '2017-03-21', 38, 10),
+(142, 10, 'UNPAID', '2017-03-21', 39, 10),
+(143, 10, 'UNPAID', '2017-03-21', 40, 10),
+(144, 10, 'UNPAID', '2017-03-21', 41, 10),
+(145, 10, 'UNPAID', '2017-03-21', 42, 10),
+(146, 10, 'UNPAID', '2017-03-21', 43, 10),
+(147, 10, 'UNPAID', '2017-03-21', 44, 10),
+(148, 10, 'UNPAID', '2017-03-21', 45, 10),
+(149, 10, 'UNPAID', '2017-03-21', 46, 10),
+(150, 10, 'UNPAID', '2017-03-21', 47, 10),
+(151, 10, 'UNPAID', '2017-03-21', 48, 10),
+(152, 10, 'UNPAID', '2017-03-21', 49, 10),
+(153, 10, 'UNPAID', '2017-03-21', 50, 10),
+(154, 10, 'UNPAID', '2017-03-21', 51, 10),
+(155, 10, 'UNPAID', '2017-03-21', 52, 10);
 
 -- --------------------------------------------------------
 
@@ -696,7 +776,8 @@ INSERT INTO `tbl_work_information` (`Members_id`, `Work_status`, `Work_address`,
 (150, '', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
 (151, '', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
 (152, '', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
-(153, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0');
+(153, 'No', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0'),
+(155, '', 'None', 'None', 'None', 0, 'None', 'None', 'None', '0');
 
 --
 -- Indexes for dumped tables
@@ -820,6 +901,7 @@ ALTER TABLE `tbl_shared`
 -- Indexes for table `tbl_ten`
 --
 ALTER TABLE `tbl_ten`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `FK_tbl_ten_1` (`member_id`);
 
 --
@@ -853,7 +935,7 @@ ALTER TABLE `tbl_attendance`
 -- AUTO_INCREMENT for table `tbl_child_information`
 --
 ALTER TABLE `tbl_child_information`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `tbl_church_expenses`
 --
@@ -893,7 +975,7 @@ ALTER TABLE `tbl_listofhostpastor`
 -- AUTO_INCREMENT for table `tbl_member_information`
 --
 ALTER TABLE `tbl_member_information`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
 --
 -- AUTO_INCREMENT for table `tbl_offerings`
 --
@@ -904,6 +986,11 @@ ALTER TABLE `tbl_offerings`
 --
 ALTER TABLE `tbl_shared`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `tbl_ten`
+--
+ALTER TABLE `tbl_ten`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT for table `tbl_useraccount`
 --

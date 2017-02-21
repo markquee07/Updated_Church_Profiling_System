@@ -82,6 +82,7 @@ Partial Class frmMainFinal
         Me.panelRegisterUnder = New System.Windows.Forms.Panel()
         Me.ptbMember = New System.Windows.Forms.PictureBox()
         Me.ptbPastor = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.panelReport.SuspendLayout()
         CType(Me.ptbReportCerficate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbReportChurchFinancialTrans, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -446,7 +447,7 @@ Partial Class frmMainFinal
         Me.panelMenuBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelMenuBar.Location = New System.Drawing.Point(0, 0)
         Me.panelMenuBar.Name = "panelMenuBar"
-        Me.panelMenuBar.Size = New System.Drawing.Size(1362, 47)
+        Me.panelMenuBar.Size = New System.Drawing.Size(1348, 47)
         Me.panelMenuBar.TabIndex = 35
         '
         'lblDay
@@ -524,7 +525,7 @@ Partial Class frmMainFinal
         Me.Panel2.Controls.Add(Me.lblUsername)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(1166, 0)
+        Me.Panel2.Location = New System.Drawing.Point(1152, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(196, 47)
         Me.Panel2.TabIndex = 88
@@ -711,12 +712,22 @@ Partial Class frmMainFinal
         Me.ptbPastor.TabIndex = 23
         Me.ptbPastor.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(559, 152)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 45
+        Me.Button1.Text = "Test"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmMainFinal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1362, 557)
+        Me.ClientSize = New System.Drawing.Size(1348, 557)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.panelReport)
         Me.Controls.Add(Me.panelReportChurchFinancial)
         Me.Controls.Add(Me.panelViewUnder)
@@ -848,4 +859,5 @@ Partial Class frmMainFinal
     Public WithEvents ptbViewBurialOfficials As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents lblUsername As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

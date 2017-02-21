@@ -104,6 +104,7 @@
     <Compile Include="Class\Emergencyfund.vb" />
     <Compile Include="Class\Expenditure.vb" />
     <Compile Include="Class\Expenses.vb" />
+    <Compile Include="Class\Monthly_fee.vb" />
     <Compile Include="Class\Offering.vb" />
     <Compile Include="Class\Pastor.vb" />
     <Compile Include="Class\Selected_Official.vb" />
@@ -228,6 +229,12 @@
     </Compile>
     <Compile Include="Forms\frmMember_registration.Designer.vb">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMonthlyFee.Designer.vb">
+      <DependentUpon>frmMonthlyFee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMonthlyFee.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmOffering.Designer.vb">
@@ -381,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMember_registration.resx">
       <DependentUpon>frmMember_registration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMonthlyFee.resx">
+      <DependentUpon>frmMonthlyFee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmOffering.resx">
       <DependentUpon>frmOffering.vb</DependentUpon>
